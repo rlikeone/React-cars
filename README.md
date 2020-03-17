@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Background information
 
-## Available Scripts
+We are thinking of porting the car search functionality as a standalone component that can be used by third parties (as well as our own applications). The API to fetch the locations is public and does not always require authentication.
 
-In the project directory, you can run:
+We don’t expect you to deliver a finished application, this would be unfair. This assessment will be used to determine your coding style, see approaches you use and verify your decisions. The max time we expect you to spend on this assessment is 4 hours.
 
-### `npm start`
+Prerequisites
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+React application with SSR
+Webpack config, not using RCA
+State should be handled with redux store
+Cars should be displayed on the map using google maps API. The actual implementation of the google maps falls outside the scope of this assessment, but the data should be prepared to be consumed by google maps API.
+Prepare the API request for retrieving a car based on user input (i.e. searching for a location). The actual implementation falls outside the scope of this assessment.
+The styling itself is not important but the setup for styling of a standalone component is.
+Unit tests and documentation should be part of the component (One is enough as an example).
+Error handling should be thought of.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Task description
 
-### `npm test`
+Fetch all locations from our public API
+https://rest.greenwheels.com/api/cities
+https://rest.greenwheels.com/api/cities/%7BAAAAAAAAAAAAAAACAAAAAA==%7D/locations
+https://rest.greenwheels.com/api/cities/%7BAAAAAAAAAAAAAAACAAAAAA==%7D/locations/cars
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Make these locations visible in a list per city and make sure the user can distinct:
+· Location Address
+· Car model
+· License plate
+· Car State
